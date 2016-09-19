@@ -8,7 +8,7 @@ USER root
 
 RUN mkdir /data && \
   apt-get update && \
-  apt-get install -y maven postgresql-client
+  apt-get install -y maven postgresql-client rsync
 
 # USER jenkins
 
