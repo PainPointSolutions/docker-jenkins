@@ -9,7 +9,7 @@ USER root
 RUN mkdir /data
 
 RUN apt-get update && \
-    apt-get install wget ca-certificates apt-transport-https software-properties-common telnet rsync
+    apt-get install -y wget ca-certificates apt-transport-https software-properties-common telnet rsync
 
 # postgresql client 9.6    
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
