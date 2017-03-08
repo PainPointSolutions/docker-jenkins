@@ -6,7 +6,8 @@ MAINTAINER Robert Hänsel <robert@painpoint-solutions.net>
 
 USER root
 
-RUN mkdir /data
+RUN mkdir /data && \
+  mkdir /root/.ssh
 
 RUN apt-get update && \
     apt-get install -y wget ca-certificates apt-transport-https software-properties-common telnet rsync
