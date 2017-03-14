@@ -22,14 +22,15 @@ RUN echo "deb http://ftp2.de.debian.org/debian unstable main non-free contrib" >
 RUN apt-get update && \
     apt-get upgrade -y
 
-RUN apt-get install -y postgresql-client-9.6 maven/unstable
+RUN apt-get install -y curl postgresql-client-9.6 maven/unstable
 
 RUN curl -fsSL https://yum.dockerproject.org/gpg | apt-key add - && \
   add-apt-repository "deb https://apt.dockerproject.org/repo/ \
        debian-$(lsb_release -cs) \
        main"
 
-RUN apt-get update && apt-get -y install docker-engine
+RUN apt-get update && \
+  apt-get -y install docker-engine
 
 WORKDIR /var/jenkins_home
 
