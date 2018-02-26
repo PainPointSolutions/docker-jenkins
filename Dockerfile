@@ -13,7 +13,7 @@ RUN mkdir /data && \
 
 RUN apt update && \
   apt upgrade -y && \
-  apt install -y wget ca-certificates apt-transport-https software-properties-common curl telnet rsync vim
+  apt install -y wget ca-certificates apt-transport-https software-properties-common curl telnet rsync vim graphicsmagick
 
 # postgresql client 9.6    
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" > /etc/apt/sources.list.d/pgdg.list && \
