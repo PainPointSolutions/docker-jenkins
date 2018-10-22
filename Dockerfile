@@ -34,7 +34,7 @@ RUN apt update && \
 RUN apt install -y postgresql-client-9.6 docker-engine maven/unstable
 
 # add sonar-scanner
-RUN wget --no-verbose -O /tmp/sonar-scanner.zip "https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip" && \
+RUN wget --no-verbose -O /tmp/sonar-scanner.zip "https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.2.0.1227-linux.zip" && \ 
   unzip -q -d /opt /tmp/sonar-scanner.zip && \
   ln -s /opt/sonar-scanner-3.0.3.778-linux /opt/sonar-scanner && \
   ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner && \
